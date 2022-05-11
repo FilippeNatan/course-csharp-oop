@@ -7,7 +7,7 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entre com seu nome complete:");
+            Console.WriteLine("Entre com seu nome completo:");
             string nomeCompleto = Console.ReadLine();
             Console.WriteLine("Quantos quartos tem na sua casa?");
             int numeroDeQuartos = int.Parse(Console.ReadLine());
