@@ -7,9 +7,11 @@ namespace Exercise01
         static void Main(string[] args)
         {
             //Solução com POO
-            Pessoa x, y;
-            x = new Pessoa();
-            y = new Pessoa();
+            Pessoa x = new Pessoa();
+            Pessoa y = new Pessoa();
+
+            Funcionario n = new Funcionario();
+            Funcionario s = new Funcionario();
 
             Console.WriteLine("Dados da primeira pessoa:");
             Console.Write("Nome: ");
@@ -39,6 +41,22 @@ namespace Exercise01
             }
 
             Console.WriteLine("Pessoa mais velha: {0}", pessoaMaisVelha);
+
+            Console.WriteLine("Dados do primeiro funcionário:");
+            Console.Write("Nome: ");
+            n.nome = Console.ReadLine();
+            Console.Write("Salário: ");
+            n.salario = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados do segundo funcionário:");
+            Console.Write("Nome: ");
+            s.nome = Console.ReadLine();
+            Console.Write("Salário: ");
+            s.salario = float.Parse(Console.ReadLine());
+
+            double mediaSalario = (n.salario + s.salario) / 2.0;
+
+            Console.WriteLine("Salário médio {0} = ", mediaSalario);
         }
     }
 }
