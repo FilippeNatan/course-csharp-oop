@@ -6,29 +6,32 @@ namespace Exercise01
     {
         static void Main(string[] args)
         {
-            //Solução sem POO
+            //Solução com POO
+            Pessoa x, y;
+            x = new Pessoa();
+            y = new Pessoa();
 
             Console.WriteLine("Dados da primeira pessoa:");
             Console.Write("Nome: ");
-            string nomePessoa1 = Console.ReadLine();
+            x.nome = Console.ReadLine();
             Console.Write("Idade: ");
-            int idadePessoa1 = int.Parse(Console.ReadLine());
+            x.idade = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Dados da segunda pessoa:");
             Console.Write("Nome: ");
-            string nomePessoa2 = Console.ReadLine();
+            y.nome = Console.ReadLine();
             Console.Write("Idade: ");
-            int idadePessoa2 = int.Parse(Console.ReadLine());
+            y.idade = int.Parse(Console.ReadLine());
 
             string pessoaMaisVelha;
 
-            if (idadePessoa1 > idadePessoa2)
+            if (x.idade > y.idade)
             {
-                pessoaMaisVelha = nomePessoa1;
+                pessoaMaisVelha = x.nome;
             }
-            else if (idadePessoa2 > idadePessoa1)
+            else if (y.idade > x.idade)
             {
-                pessoaMaisVelha = nomePessoa2;
+                pessoaMaisVelha = y.nome;
             }
             else
             {
